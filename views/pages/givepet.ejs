@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Have a pet to give away</title>
+    <script src="scripts.js"></script>
+</head>
+<body>
+    <%- include('../header') %>
+    <h1>Have a pet to give away</h1>
+    <div class="container">
+        
+        <%- include('../sidemenu') %>
+
+        <div class="content">
+            <h2>Home page</h2>
+            <form id="giveAway" action="/giveAway" method="POST">
+                <label>Cat or Dog:</label>
+                <select id="petType" name="petType">
+                    <option value="cat">Cat</option>
+                    <option value="dog">Dog</option>
+                </select>
+            <br>
+                <label>Breed:</label>
+                <input type="text" name="breed1" >
+                <input type="checkbox" name="breed2" value="mixed breed">
+                <label>Mix Breed</label>
+            <br>
+                <label>Age:</label>
+                <select name="age">
+                    <option value="puppy/kitten" selected>Puppy/Kitten</option>
+                    <option value="adult">Adult</option>
+                    <option value="senior">Senior</option>
+                </select>
+            <br>
+                <label>Gender:</label>
+                <input type="radio" name="gender" value="male">
+                <label>Male</label>
+                <input type="radio" name="gender" value="female">
+                <label>Female</label>
+            <br>
+                <label>Compatibility:</label>
+                <input type="checkbox" name="compatibility" value="other dogs">
+                <label>Gets along with other dogs</label>
+                <input type="checkbox" name="compatibility" value="other cats">
+                <label>Gets along with other cats</label>
+                <input type="checkbox" name="compatibility" value="small children">
+                <label>Suitable for a family with small children</label>
+            <br>
+                <label>Comments:</label>
+                <textarea name="comments" rows="4"></textarea>
+            <br>
+                <label>Current Owner's Name:</label>
+                <input type="text" name="ownerName">
+            <br>
+                <label for="ownerEmail">Current Owner's Email:</label>
+                <input type="email" name="ownerEmail">
+            <br>
+                <button type="submit">Submit</button>
+                <button type="reset">Clear</button>
+            </form>
+            <script>giveAwayRequest()</script>
+        </div>
+    </div>
+    <%- include('../footer') %>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Find a cat/dog</title>
+    <script src="scripts.js"></script>
+</head>
+<body>
+    <header>
+        <h1>
+            <b>Adopt-A-Cat/Dog</b>
+            <a href="home.html">
+                <img src="logo.jpeg" class="logo" alt="logo"><!--https://www.vecteezy.com/photo/22189658-simple-dog-logo-on-black-background-generative-ai-->
+            </a>
+        </h1>
+        <div id="date"></div>
+            <script>
+                dateTime();
+            </script>
+        
+          
+        
+    </header>
+
+    <div class="container">
+        <div class="side-menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="availablepets.html">Browse available pets</a></li>
+                <li>Find a cat/dog</li>
+                <li><a href="dogcare.html">Dog care</a></li>
+                <li><a href="catcare.html">Cat care</a></li>
+                <li><a href="givepet.html">Have a pet to give away</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <div class="content">
+            <h2>Find a cat/dog</h2>
+            
+            <form id="findAnimal">
+                <label>Cat or Dog:</label>
+                <select id="petType" name="petType">
+                    <option value="cat">Cat</option>
+                    <option value="dog">Dog</option>
+                </select>
+            <br>
+                <label>Breed:</label>
+                <input type="text" id="breed1">
+                <input type="checkbox" id="breed2" value="doesntMatter">
+                <label>Doesn't matter</label>
+            <br>
+                <label>Preferred Age:</label>
+                <select id="age" name="age">
+                    <option value="puppy_kitten">Puppy/Kitten</option>
+                    <option value="adult">Adult</option>
+                    <option value="senior">Senior</option>
+                    <option value="doesntMatter">Doesn't matter</option>
+                </select>
+            <br>
+                <label>Preferred Gender:</label>
+                <input type="radio" name="gender" value="male">
+                <label>Male</label>
+                <input type="radio" name="gender" value="female">
+                <label>Female</label>
+                <input type="radio" name="gender" value="doesntMatter">
+                <label>Doesn't matter</label>
+            <br>
+                <label>Compatibility:</label>
+                <input type="checkbox" name="compatibility" value="otherDogs">
+                <label>Gets along with other dogs</label>
+                <input type="checkbox" name="compatibility" value="otherCats">
+                <label>Gets along with other cats</label>
+                <input type="checkbox" name="compatibility" value="smallChildren">
+                <label>Gets along with small children</label>
+            <br>
+                <button type="submit">Submit</button>
+                <button type="reset">Clear</button>
+            </form>
+            <script>findAnimalRequest()</script>
+        </div>
+    </div>
+
+    <footer>
+        <a href="privacydisclaimer.html">Privacy and Disclaimer Statement</a>
+    </footer>
+</body>
+</html>
